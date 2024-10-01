@@ -6,11 +6,36 @@ import menu3 from "../../assets/swipes/slice.jpg";
 import styles from "./Home.module.css";
 import Typed from "typed.js";
 import { Swipes } from "../Swipes/Swipes";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function Home() {
   const headerRef = useRef(null);
+
+  const [isTyping, setIsTyping] = useState(false);
+
+  useEffect(() => {
+    if (!headerRef.current) return;
+
+    const observerCallback = (entries) => {
+      const [entry] = entries;
+      if (entry.isIntersecting) {
+        setIsTyping(true);
+        observer.disconnect();
+      }
+    };
+
+    const observer = new IntersectionObserver(observerCallback, {
+      threshold: 0.5,
+    });
+    observer.observe(headerRef.current);
+
+    return () => {
+      if (observer) observer.unobserve(headerRef.current);
+    };
+  }, []);
+
   const typeHeader = () => {
+    if (!isTyping) return;
     const typed = new Typed(headerRef.current, {
       strings: [`<span class='${styles.alterFont}' >The best in town!</span>`],
       typeSpeed: 30,
@@ -18,7 +43,7 @@ function Home() {
     });
     return () => typed.destroy();
   };
-  useEffect(typeHeader, []);
+  useEffect(typeHeader, [isTyping]);
 
   return (
     <section className={styles.home}>
