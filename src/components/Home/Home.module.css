@@ -50,6 +50,9 @@
 }
 
 .revealBg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   background-image: url(../../assets/swipes/bg1.jpg);
@@ -60,6 +63,21 @@
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+.revealBg h3 {
+  font-size: 2.5rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.65);
+  width: 100%;
+  text-align: center;
+}
+
+span.alterFont {
+  color: rgb(255, 136, 0);
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Dancing Script", cursive;
 }
 
 .revealBg::after {
