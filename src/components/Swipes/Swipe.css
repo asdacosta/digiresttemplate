@@ -76,3 +76,13 @@
   width: 100%;
   color: black;
 }
+
+img.active-slide {
+  animation: zoom 4s ease-in-out forwards;
+}
+
+@keyframes zoom {
+  to {
+    transform: scale(1.2);
+  }
+}
