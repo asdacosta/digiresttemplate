@@ -45,9 +45,10 @@ function Swipes() {
         scrollbar={{ draggable: false }}
         autoHeight={true}
       >
-        {desktopData.map((slide) => (
+        {desktopData.map((slide, index) => (
           <Slide key={slide.id}>
             <img
+              className={index === currentSlideIndex ? "active-slide" : ""}
               style={{
                 width: "100vw",
                 height: "100vh",
