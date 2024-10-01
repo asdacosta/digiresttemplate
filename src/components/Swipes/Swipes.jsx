@@ -40,7 +40,7 @@ function Swipes() {
         effect={"fade"}
         speed={500}
         onRealIndexChange={(slide) => setCurrentSlideIndex(slide.realIndex)}
-        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop
         scrollbar={{ draggable: false }}
         autoHeight={true}
@@ -49,12 +49,6 @@ function Swipes() {
           <Slide key={slide.id}>
             <img
               className={index === currentSlideIndex ? "active-slide" : ""}
-              style={{
-                width: "100vw",
-                height: "100vh",
-                objectFit: "fill",
-                userSelect: "none",
-              }}
               src={slide.src}
               alt={slide.alt}
               draggable="false"
