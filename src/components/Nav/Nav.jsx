@@ -4,7 +4,7 @@ function Nav() {
   return (
     <section className={styles.nav}>
       <section className={styles.logoBox}>
-        <h2>•Restaurant•</h2>
+        <h2>•Pizza•</h2>
       </section>
       <section className={styles.right}>
         <button>Home</button>
