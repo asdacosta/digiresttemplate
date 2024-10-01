@@ -3,6 +3,7 @@
   justify-content: space-between;
   padding: 0.5rem 3rem;
   align-items: center;
+  color: rgb(173, 92, 0);
   box-shadow: 0 0.1rem 0.2rem rgb(255, 136, 0);
   width: 100%;
   position: fixed;
@@ -29,6 +30,7 @@
 
 .right button {
   font-size: 1.1rem;
+  font-weight: 400;
   padding: 0;
   color: black;
   background: none;
