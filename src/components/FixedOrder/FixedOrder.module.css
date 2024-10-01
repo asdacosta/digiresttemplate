@@ -24,6 +24,9 @@
   font-size: 0.8rem;
   font-weight: 300;
   color: white;
+  background-color: black;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.5rem;
   position: absolute;
   left: 1.8rem;
   opacity: 0;
