@@ -4,9 +4,22 @@ import menu1 from "../../assets/swipes/starters.jpg";
 import menu2 from "../../assets/swipes/veganPizza.jpg";
 import menu3 from "../../assets/swipes/slice.jpg";
 import styles from "./Home.module.css";
+import Typed from "typed.js";
 import { Swipes } from "../Swipes/Swipes";
+import { useEffect, useRef } from "react";
 
 function Home() {
+  const headerRef = useRef(null);
+  const typeHeader = () => {
+    const typed = new Typed(headerRef.current, {
+      strings: [`<span class='${styles.alterFont}' >The best in town!</span>`],
+      typeSpeed: 30,
+      showCursor: false,
+    });
+    return () => typed.destroy();
+  };
+  useEffect(typeHeader, []);
+
   return (
     <section className={styles.home}>
       <Swipes />
@@ -41,7 +54,7 @@ function Home() {
         </section>
       </section>
       <section className={styles.revealBg}>
-        <h3></h3>
+        <h3 ref={headerRef}></h3>
       </section>
       <section className={styles.homeMenu}>
         <section>
