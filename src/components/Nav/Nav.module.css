@@ -1,0 +1,52 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 3rem;
+  align-items: center;
+  box-shadow: 0 0.1rem 0.2rem rgb(255, 136, 0);
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.logoBox h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.logoBox h2:hover {
+  opacity: 0.7;
+}
+
+.right {
+  display: flex;
+  gap: 2rem;
+}
+
+.right button {
+  font-size: 1.1rem;
+  padding: 0;
+  color: black;
+  background: none;
+  position: relative;
+  transition: 0.25s ease-in-out color, 0.25s ease-in-out transform;
+}
+
+.right button:hover {
+  border: none;
+  color: rgb(255, 136, 0);
+  transform: translateY(-0.2rem);
+}
+
+.right button:hover::after {
+  content: "•";
+  font-size: 1.2rem;
+  display: block;
+  position: absolute;
+  bottom: -70%;
+  left: 48%;
+}
