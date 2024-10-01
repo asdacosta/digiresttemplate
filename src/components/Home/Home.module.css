@@ -1,0 +1,166 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  /* gap: 3rem; */
+  position: relative;
+  z-index: 3;
+}
+
+.imgBox {
+  height: 30rem;
+  width: 20rem;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.imgBox:hover img,
+.someMenu > section:hover img {
+  transform: scale(1.1);
+}
+
+.home img {
+  object-fit: fill;
+  user-select: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cards {
+  z-index: 2;
+  background-color: white;
+  padding: 3rem 0;
+}
+
+.cards > section {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+}
+
+.cards h3 {
+  font-size: 1.5rem;
+}
+
+.infos {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  width: 25rem;
+}
+
+.revealBg {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../assets/swipes/bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.revealBg::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.homeMenu {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 80vh;
+  width: 100vw;
+  background-color: white;
+  z-index: 2;
+}
+
+.homeMenu > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.expandAll {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: color 0.25s ease-in-out;
+}
+
+.expandAll svg {
+  width: 1rem;
+  transition: fill 0.25s ease-in-out;
+}
+
+.expandAll:hover {
+  color: rgb(255, 136, 0);
+}
+
+.expandAll:hover svg {
+  fill: rgb(255, 136, 0);
+}
+
+.someMenu {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.someMenu > section {
+  height: 15rem;
+  width: 20rem;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.someMenu > section:hover::after {
+  color: rgb(255, 136, 0);
+}
+
+.someMenu > section::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.someMenu > section:first-child::after {
+  content: "Starters";
+}
+
+.someMenu > section:nth-child(2)::after {
+  content: "Vegan";
+}
+
+.someMenu > section:nth-child(3)::after {
+  content: "Meat lovers";
+}
+
+.someMenu > section::after {
+  color: aliceblue;
+}
+
+.someMenu img {
+  width: 100%;
+  height: 100%;
+}
