@@ -1,0 +1,101 @@
+.fixed {
+  z-index: 5;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: fixed;
+  left: 5%;
+  bottom: 5rem;
+  transform: translateX(-50%);
+}
+
+.socials > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.socials > div::after {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: white;
+  position: absolute;
+  left: 1.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.socials > div:first-child::after {
+  content: "Instagram";
+}
+
+.socials > div:nth-child(2)::after {
+  content: "Facebook";
+}
+
+.socials > div:nth-child(3)::after {
+  content: "X";
+}
+
+.socials > div:last-child::after {
+  content: "Email";
+}
+
+.socials > div:hover::after {
+  opacity: 1;
+}
+
+.socials svg {
+  width: 1.6rem;
+  fill: rgb(255, 136, 0);
+  transition: fill 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.socials svg:hover {
+  fill: rgb(173, 92, 0);
+}
+
+.fixedOrder {
+  position: fixed;
+  bottom: 0;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(255, 136, 0);
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  animation: blink 1.2s infinite ease-in-out;
+  cursor: pointer;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0.3;
+    box-shadow: 0 0 0.2rem rgb(255, 136, 0);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 1rem rgb(255, 136, 0);
+  }
+}
+
+.fixedOrder:hover {
+  animation: none;
+}
+
+.fixedOrder span svg {
+  width: 1.2rem;
+}
+
+.fixedOrder span {
+  display: flex;
+  gap: 0.3rem;
+}
