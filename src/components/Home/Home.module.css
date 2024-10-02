@@ -13,6 +13,10 @@
   border-radius: 2rem;
 }
 
+.imgBox img {
+  height: 100%;
+}
+
 .imgBox:hover img,
 .someMenu > section:hover img {
   transform: scale(1.1);
