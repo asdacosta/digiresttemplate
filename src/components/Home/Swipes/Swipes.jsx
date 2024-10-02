@@ -27,7 +27,7 @@ function Swipes() {
   return (
     <section className="swipeContainer" style={{ position: "sticky" }}>
       <div className="swipeHeaders">
-        <h2>Taste the love in every slice!</h2>
+        <h2>Your perfect slice awaits!</h2>
         <Link to="/contact">
           <button>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
