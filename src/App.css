@@ -14,3 +14,7 @@
   position: relative;
   overflow-x: hidden;
 }
+
+button {
+  font-size: 1rem;
+}
