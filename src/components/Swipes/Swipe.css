@@ -84,9 +84,14 @@
   height: 100vh;
   object-fit: fill;
   user-select: none;
-  transition: transform 4s ease-in-out;
 }
 
 img.active-slide {
-  transform: scale(1.15);
+  animation: scale 4s ease-in-out forwards;
+}
+
+@keyframes scale {
+  to {
+    transform: scale(1.15);
+  }
 }
