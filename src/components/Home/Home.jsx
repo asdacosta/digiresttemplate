@@ -62,7 +62,12 @@ function Home() {
       <section className={styles.cards}>
         <section>
           <div className={styles.imgBox}>
-            <img src={midMobile1} alt="first pizza info" />
+            <img
+              src={midMobile1}
+              alt="first pizza info"
+              loading="lazy"
+              draggable="false"
+            />
           </div>
           <div className={styles.infos}>
             <h3>Take a slice!</h3>
@@ -93,7 +98,12 @@ function Home() {
             </div>
           </div>
           <div className={styles.imgBox}>
-            <img src={midMobile2} alt="first pizza info" />
+            <img
+              src={midMobile2}
+              alt="first pizza info"
+              loading="lazy"
+              draggable="false"
+            />
           </div>
         </section>
       </section>
@@ -118,17 +128,22 @@ function Home() {
           <section className={styles.someMenu}>
             <section>
               <Link to="/menu">
-                <img src={menu1} alt="Starters" />
+                <img src={menu1} alt="Starters" loading="lazy" draggable="false" />
               </Link>
             </section>
             <section>
               <Link to="/menu">
-                <img src={menu2} alt="Vegan Pizza" />
+                <img src={menu2} alt="Vegan Pizza" loading="lazy" draggable="false" />
               </Link>
             </section>
             <section>
               <Link to="/menu">
-                <img src={menu3} alt="All Pizza flavors" />
+                <img
+                  src={menu3}
+                  alt="All Pizza flavors"
+                  loading="lazy"
+                  draggable="false"
+                />
               </Link>
             </section>
           </section>

@@ -47,6 +47,7 @@ function Swipes() {
         }}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop
+        lazy
         scrollbar={{ draggable: false }}
         autoHeight={true}
       >
@@ -57,6 +58,7 @@ function Swipes() {
               src={slide.src}
               alt={slide.alt}
               draggable="false"
+              loading="lazy"
             />
           </Slide>
         ))}
