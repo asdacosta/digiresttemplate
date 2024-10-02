@@ -15,8 +15,18 @@ function Nav() {
         <NavLink to="/menu" className={({ isActive }) => (isActive ? styles.active : "")}>
           <button>Menu</button>
         </NavLink>
-        <button>Contact</button>
-        <button>Events</button>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) => (isActive ? styles.active : "")}
+        >
+          <button>Contact</button>
+        </NavLink>
+        <NavLink
+          to="/events"
+          className={({ isActive }) => (isActive ? styles.active : "")}
+        >
+          <button>Events</button>
+        </NavLink>
       </section>
       {/* <button onClick={playMenu} className={styles.menu}>
               <Player
