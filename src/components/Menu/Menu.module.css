@@ -62,7 +62,7 @@
 }
 
 .pdf button::before {
-  content: "Download Now";
+  content: "Inactive";
   display: flex;
   justify-content: center;
   align-items: center;
