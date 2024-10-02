@@ -57,7 +57,7 @@ function Home() {
   };
 
   return (
-    <section className={styles.home}>
+    <section className={styles.home} onWheel={handleWheel}>
       <Swipes />
       <section className={styles.cards}>
         <section>
@@ -111,7 +111,6 @@ function Home() {
         className={styles.revealBg}
         ref={revealBgRef}
         style={{ transform: `scale(${scaleValue})` }}
-        onWheel={handleWheel}
       >
         <h3 ref={headerRef}></h3>
       </section>
