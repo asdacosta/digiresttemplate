@@ -19,7 +19,11 @@ body {
 }
 
 button {
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding: 0.6em 1.2em;
   font-family: inherit;
+}
+
+a {
+  color: black;
 }
