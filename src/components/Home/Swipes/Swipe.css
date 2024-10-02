@@ -32,6 +32,7 @@
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 1rem;
   padding: 0.5rem 1rem;
+  white-space: nowrap;
 }
 
 .swipeHeaders button {
@@ -100,6 +101,6 @@ img.active-slide {
 
 @media (max-width: 650px) {
   .swipeHeaders h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
