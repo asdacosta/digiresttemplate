@@ -5,9 +5,9 @@ import menu2 from "../../assets/swipes/veganPizza.jpg";
 import menu3 from "../../assets/swipes/slice.jpg";
 import styles from "./Home.module.css";
 import Typed from "typed.js";
-import { Swipes } from "../Swipes/Swipes";
+import { Swipes } from "./Swipes/Swipes";
 import { useEffect, useRef, useState } from "react";
-import { Location } from "./Location";
+import { Location } from "./Location/Location";
 
 function Home() {
   const headerRef = useRef(null);
