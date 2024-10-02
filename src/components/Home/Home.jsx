@@ -7,6 +7,7 @@ import styles from "./Home.module.css";
 import Typed from "typed.js";
 import { Swipes } from "../Swipes/Swipes";
 import { useEffect, useRef, useState } from "react";
+import { Location } from "./Location";
 
 function Home() {
   const headerRef = useRef(null);
@@ -133,8 +134,9 @@ function Home() {
             </h3>
             <div className={styles.locationPrecise}>
               <p>Pizza </p>
-              <p>84 Oak Street </p>
-              <p>Maplewood, Illinois 60050</p>
+              <p>Airport Residential Area</p>
+              <p>Accra, Greater Accra</p>
+              <p>Ghana</p>
             </div>
           </div>
           <div className={styles.hours}>
@@ -194,7 +196,7 @@ function Home() {
             </div>
           </div>
         </section>
-        <section></section>
+        <Location />
       </section>
     </section>
   );
