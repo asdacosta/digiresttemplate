@@ -1,4 +1,5 @@
 import styles from "./Nav.module.css";
+import { Link, NavLink } from "react-router-dom";
 
 function Nav() {
   return (
@@ -7,9 +8,13 @@ function Nav() {
         <h2>•Pizza•</h2>
       </section>
       <section className={styles.right}>
-        <button>Home</button>
-        <button>About Us</button>
-        <button>Menu</button>
+        <NavLink to="/" className={({ isActive }) => (isActive ? styles.active : "")}>
+          <button>Home</button>
+        </NavLink>
+        {/* <button>About Us</button> */}
+        <NavLink to="/menu" className={({ isActive }) => (isActive ? styles.active : "")}>
+          <button>Menu</button>
+        </NavLink>
         <button>Contact</button>
         <button>Events</button>
       </section>
