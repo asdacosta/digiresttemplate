@@ -8,6 +8,7 @@ import Typed from "typed.js";
 import { Swipes } from "./Swipes/Swipes";
 import { useEffect, useRef, useState } from "react";
 import { Location } from "./Location/Location";
+import { Link } from "react-router-dom";
 
 function Home() {
   const headerRef = useRef(null);
@@ -39,7 +40,7 @@ function Home() {
     if (!isTyping) return;
     const typed = new Typed(headerRef.current, {
       strings: [`<span class='${styles.alterFont}' >The best in town!</span>`],
-      typeSpeed: 30,
+      typeSpeed: 40,
       showCursor: false,
     });
     return () => typed.destroy();
@@ -71,7 +72,9 @@ function Home() {
               iure ad! Quas natus cum eaque quia nulla .
             </p>
             <div>
-              <button className={styles.menuButton}>Check our Menu</button>
+              <Link to="/menu">
+                <button className={styles.menuButton}>Check our Menu</button>
+              </Link>
             </div>
           </div>
         </section>
@@ -84,7 +87,9 @@ function Home() {
               iure ad! Quas natus cum eaque quia nulla .
             </p>
             <div>
-              <button className={styles.menuButton}>Check our Menu</button>
+              <Link to="/menu">
+                <button className={styles.menuButton}>Check our Menu</button>
+              </Link>
             </div>
           </div>
           <div className={styles.imgBox}>
@@ -103,20 +108,28 @@ function Home() {
       <section className={styles.homeMenu}>
         <section>
           <div className={styles.expandAll}>
-            Explore all Menu{" "}
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
-            </svg>
+            <Link to="/menu">
+              Explore all Menu{" "}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
+              </svg>
+            </Link>
           </div>
           <section className={styles.someMenu}>
             <section>
-              <img src={menu1} alt="Starters" />
+              <Link to="/menu">
+                <img src={menu1} alt="Starters" />
+              </Link>
             </section>
             <section>
-              <img src={menu2} alt="Vegan Pizza" />
+              <Link to="/menu">
+                <img src={menu2} alt="Vegan Pizza" />
+              </Link>
             </section>
             <section>
-              <img src={menu3} alt="All Pizza flavors" />
+              <Link to="/menu">
+                <img src={menu3} alt="All Pizza flavors" />
+              </Link>
             </section>
           </section>
         </section>
