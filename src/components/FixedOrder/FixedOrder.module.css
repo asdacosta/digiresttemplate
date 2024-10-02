@@ -90,6 +90,7 @@
   animation: blink 1.2s infinite ease-in-out;
   cursor: pointer;
   z-index: 5;
+  white-space: nowrap;
 }
 
 @keyframes blink {
