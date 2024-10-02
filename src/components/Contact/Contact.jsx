@@ -29,9 +29,9 @@ function Contact() {
             <select name="serve" id="serve" defaultValue="" autoComplete="new-serve">
               <option value="" disabled></option>
               <option value="order">Place an order</option>
+              <option value="book">Book a table</option>
               <option value="general inquiry">General Inquiry</option>
               <option value="feedback">Feedback on Your Experience</option>
-              <option value="reservation">Reservation Request</option>
               <option value="catering">Catering Information</option>
               <option value="menu questions">Menu Questions</option>
               <option value="event booking">Event Booking</option>
