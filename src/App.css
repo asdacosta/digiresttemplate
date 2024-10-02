@@ -2,6 +2,10 @@
   border: 0.2rem solid yellow;
 } */
 
+body {
+  overflow-x: hidden;
+}
+
 #root {
   width: 100vw;
   height: 100vh;
@@ -16,4 +20,6 @@
 
 button {
   font-size: 1rem;
+  padding: 0.6em 1.2em;
+  font-family: inherit;
 }
