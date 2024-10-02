@@ -10,12 +10,12 @@ import { useEffect, useRef, useState } from "react";
 
 function Home() {
   const headerRef = useRef(null);
-
+  const revealBgRef = useRef(null);
   const [isTyping, setIsTyping] = useState(false);
+  const [scaleValue, setScaleValue] = useState(1);
 
   useEffect(() => {
     if (!headerRef.current) return;
-
     const observerCallback = (entries) => {
       const [entry] = entries;
       if (entry.isIntersecting) {
@@ -30,7 +30,7 @@ function Home() {
     observer.observe(headerRef.current);
 
     return () => {
-      if (observer) observer.unobserve(headerRef.current);
+      if (observer && headerRef.current) observer.unobserve(headerRef.current);
     };
   }, []);
 
@@ -44,6 +44,15 @@ function Home() {
     return () => typed.destroy();
   };
   useEffect(typeHeader, [isTyping]);
+
+  const handleWheel = (event) => {
+    const delta = event.deltaY;
+    let newScaleValue = scaleValue + delta * 0.0003;
+
+    if (newScaleValue < 1) newScaleValue = 1; // Prevent scaling below normal
+    if (newScaleValue > 1.5) newScaleValue = 1.5; // Prevent scaling too high
+    setScaleValue(newScaleValue);
+  };
 
   return (
     <section className={styles.home}>
@@ -61,6 +70,9 @@ function Home() {
               iure ad! Quas natus cum eaque quia nulla deleniti dolor magni, voluptatum
               nihil consequatur eos deserunt beatae, harum distinctio.
             </p>
+            <div>
+              <button className={styles.menuButton}>Check our Menu</button>
+            </div>
           </div>
         </section>
         <section>
@@ -72,13 +84,21 @@ function Home() {
               iure ad! Quas natus cum eaque quia nulla deleniti dolor magni, voluptatum
               nihil consequatur eos deserunt beatae, harum distinctio.
             </p>
+            <div>
+              <button className={styles.menuButton}>Check our Menu</button>
+            </div>
           </div>
           <div className={styles.imgBox}>
             <img src={midMobile2} alt="first pizza info" />
           </div>
         </section>
       </section>
-      <section className={styles.revealBg}>
+      <section
+        className={styles.revealBg}
+        ref={revealBgRef}
+        style={{ transform: `scale(${scaleValue})` }}
+        onWheel={handleWheel}
+      >
         <h3 ref={headerRef}></h3>
       </section>
       <section className={styles.homeMenu}>
