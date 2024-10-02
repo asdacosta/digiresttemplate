@@ -39,7 +39,9 @@ function Swipes() {
         centeredSlides
         effect={"fade"}
         speed={500}
-        onRealIndexChange={(slide) => setCurrentSlideIndex(slide.realIndex)}
+        onRealIndexChange={(slide) => {
+          setTimeout(() => setCurrentSlideIndex(slide.realIndex), 400);
+        }}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop
         scrollbar={{ draggable: false }}
