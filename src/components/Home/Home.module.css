@@ -204,3 +204,76 @@ span.alterFont {
   width: 100%;
   height: 100%;
 }
+
+.location {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  z-index: 1;
+}
+
+.locationDetails h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.locationDetails svg {
+  fill: rgb(255, 136, 0);
+}
+
+.locationDetails > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.locationDetails > div:first-child svg {
+  width: 1.1rem;
+}
+
+.locationDetails > div:nth-child(2) svg {
+  width: 1.3rem;
+}
+
+.location h3 {
+  font-size: 2rem;
+  /* color: rgb(255, 136, 0); */
+}
+
+.locationDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hoursTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.hoursTable th,
+.hoursTable td {
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid #ddd;
+}
+
+.hoursTable th {
+  background-color: #f4f4f4;
+  color: rgb(211, 114, 3);
+  font-weight: 500;
+}
+
+.hoursTable tr:nth-child(even) {
+  background-color: #eeeeee;
+}
+
+.locationPrecise {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
