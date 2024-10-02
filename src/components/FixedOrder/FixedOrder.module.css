@@ -21,14 +21,14 @@
 }
 
 .socials > div::after {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 300;
   color: white;
   background-color: black;
   padding: 0.1rem 0.2rem;
   border-radius: 0.2rem;
   position: absolute;
-  left: 1.8rem;
+  left: 2rem;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
 }
@@ -70,7 +70,7 @@
 }
 
 .socials svg {
-  width: 1.6rem;
+  width: 1.75rem;
   fill: rgb(255, 136, 0);
   transition: fill 0.25s ease-in-out;
   cursor: pointer;
@@ -79,13 +79,13 @@
 .fixedOrder {
   position: fixed;
   bottom: 0;
-  bottom: 2rem;
+  bottom: 1.2rem;
   left: 50%;
   transform: translateX(-50%);
   background: rgb(255, 136, 0);
-  padding: 0.3rem 0.5rem;
+  padding: 0.4rem 0.7rem;
   border-radius: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   animation: blink 1.2s infinite ease-in-out;
   cursor: pointer;
