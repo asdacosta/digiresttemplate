@@ -61,3 +61,52 @@
 .active button {
   color: rgb(255, 136, 0);
 }
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 2.1rem;
+  overflow: hidden;
+  background-color: transparent;
+  padding: 0;
+  position: relative;
+}
+
+.menu > * {
+  position: absolute;
+}
+
+@media (max-width: 650px) {
+  .nav {
+    padding: 0.5rem rem;
+  }
+
+  .logoBox h2 {
+    font-size: 2.5rem;
+  }
+
+  .right {
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    position: absolute;
+    top: 3.9rem;
+    right: 0;
+    width: 0;
+    height: 50vh;
+    border-bottom-left-radius: 1rem;
+    padding-top: 2rem;
+    box-shadow: -0.1rem 0.1rem 0.2rem rgb(255, 136, 0);
+    pointer-events: none;
+    transition: width 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  }
+
+  .right.open {
+    width: 15rem;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
