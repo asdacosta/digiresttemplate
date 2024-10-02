@@ -1,0 +1,85 @@
+.menu {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.menu h2 {
+  font-size: 2.5rem;
+}
+
+.menu h2 svg {
+  width: 1.8rem;
+  fill: rgb(255, 136, 0);
+}
+
+.menuList {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.menuList > section {
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem dashed rgb(255, 136, 0);
+}
+
+.menuList h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.menuList div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menuList div span:last-child {
+  font-size: 0.75rem;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pdf button {
+  color: black;
+  background-color: white;
+  border: 0.15rem solid black;
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pdf button::before {
+  content: "Download Now";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transition: width 0.3s ease, color 0.3s ease;
+  z-index: 2;
+  background-color: rgb(255, 136, 0);
+  border-radius: 2rem;
+  color: transparent;
+  white-space: nowrap;
+}
+
+.pdf button:hover::before {
+  width: 100%;
+  color: black;
+}
