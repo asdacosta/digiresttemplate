@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@lottiefiles/react-lottie-player": "^3.5.4",
+    "@dotlottie/player-component": "^2.7.12",
     "leaflet": "^1.9.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
