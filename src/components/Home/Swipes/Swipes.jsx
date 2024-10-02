@@ -1,7 +1,7 @@
-import desktop1 from "../../assets/swipes/desktop1.jpg";
-import desktop2 from "../../assets/swipes/desktop3.jpg";
-import desktop3 from "../../assets/swipes/desktop4.jpg";
-import desktop4 from "../../assets/swipes/bg4.jpg";
+import desktop1 from "../../../assets/swipes/desktop1.jpg";
+import desktop2 from "../../../assets/swipes/desktop3.jpg";
+import desktop3 from "../../../assets/swipes/desktop4.jpg";
+import desktop4 from "../../../assets/swipes/bg4.jpg";
 
 import { Swiper as Swipe, SwiperSlide as Slide } from "swiper/react";
 import "swiper/css";
