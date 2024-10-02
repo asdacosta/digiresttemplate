@@ -68,8 +68,7 @@ function Home() {
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, magni
               recusandae id et eaque, nostrum totam nobis, aliquam iusto dolorem nulla
-              iure ad! Quas natus cum eaque quia nulla deleniti dolor magni, voluptatum
-              nihil consequatur eos deserunt beatae, harum distinctio.
+              iure ad! Quas natus cum eaque quia nulla .
             </p>
             <div>
               <button className={styles.menuButton}>Check our Menu</button>
@@ -82,8 +81,7 @@ function Home() {
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, magni
               recusandae id et eaque, nostrum totam nobis, aliquam iusto dolorem nulla
-              iure ad! Quas natus cum eaque quia nulla deleniti dolor magni, voluptatum
-              nihil consequatur eos deserunt beatae, harum distinctio.
+              iure ad! Quas natus cum eaque quia nulla .
             </p>
             <div>
               <button className={styles.menuButton}>Check our Menu</button>
