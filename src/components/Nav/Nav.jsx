@@ -1,5 +1,5 @@
 import styles from "./Nav.module.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useRef, useState } from "react";
 import "@dotlottie/player-component";
 
@@ -20,7 +20,9 @@ function Nav() {
   return (
     <section className={styles.nav}>
       <section className={styles.logoBox}>
-        <h2>•Pizza•</h2>
+        <h2>
+          <Link to="/">•Pizza•</Link>
+        </h2>
       </section>
       <section className={`${styles.right} ${menuOpened ? styles.open : "open"}`}>
         <NavLink to="/" className={({ isActive }) => (isActive ? styles.active : "")}>
