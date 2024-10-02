@@ -1,7 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import "./Location.css";
-import styles from "./Home.module.css";
+import styles from "../Home.module.css";
 
 function Location() {
   return (
