@@ -52,3 +52,12 @@
   bottom: -70%;
   left: 48%;
 }
+
+.active {
+  cursor: context-menu;
+  pointer-events: none;
+}
+
+.active button {
+  color: rgb(255, 136, 0);
+}
