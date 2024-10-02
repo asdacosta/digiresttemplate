@@ -63,7 +63,7 @@
 }
 
 .menu {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   height: 2rem;
@@ -79,6 +79,10 @@
 }
 
 @media (max-width: 650px) {
+  .menu {
+    display: flex;
+  }
+
   .nav {
     padding: 0.5rem rem;
   }
