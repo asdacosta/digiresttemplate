@@ -4,7 +4,7 @@
   padding: 0.5rem 3rem;
   align-items: center;
   color: rgb(173, 92, 0);
-  box-shadow: 0 0.1rem 0.2rem rgb(255, 136, 0);
+  box-shadow: 0 0.05rem 0.2rem rgb(255, 136, 0);
   width: 100%;
   position: fixed;
   z-index: 5;
@@ -103,7 +103,7 @@
     height: 50vh;
     border-bottom-left-radius: 1rem;
     padding-top: 2rem;
-    box-shadow: -0.1rem 0.1rem 0.2rem rgb(255, 136, 0);
+    box-shadow: -0.05rem 0.05rem 0.2rem rgb(255, 136, 0);
     pointer-events: none;
     transition: width 0.25s ease-in-out, opacity 0.25s ease-in-out;
   }
