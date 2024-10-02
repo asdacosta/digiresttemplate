@@ -65,7 +65,7 @@
 .menuButton:hover {
   background-color: transparent;
   color: rgb(255, 136, 0);
-  border: 0.15rem solid rgb(255, 136, 0);
+  border: 0.12rem solid rgb(255, 136, 0);
 }
 
 .revealBg {
