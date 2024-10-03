@@ -8,6 +8,30 @@
   padding: 5rem 0;
 }
 
+.type span {
+  font-size: 1.5rem;
+}
+
+.type svg:first-child {
+  width: 1.2rem;
+}
+
+.type svg:last-child {
+  width: 0.6rem;
+  margin-left: auto;
+}
+
+.type {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 25rem;
+  background-color: rgb(255, 136, 0);
+  border-radius: 0.7rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
 .fields {
   display: flex;
   flex-direction: column;
@@ -52,29 +76,11 @@
   gap: 0.3rem;
 }
 
-.contact h2 {
-  font-size: 2rem;
-}
-
 .submit {
   border-radius: 2rem;
   background-color: rgb(255, 136, 0);
   margin-top: 1rem;
   color: black;
-}
-
-.oddMedium > div {
-  height: 20vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.oddMedium > div > span:first-child {
-  font-size: 1.2rem;
-  font-weight: 600;
 }
 
 @media (max-width: 450px) {
@@ -87,4 +93,26 @@
   .fields textarea {
     width: 95%;
   }
+}
+
+.menuOptions {
+  display: grid;
+  grid-template: repeat(4, 1fr) / 1fr 1fr;
+  gap: 1rem;
+}
+
+.menuOptions > div {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.menuOptions input {
+  width: 1.2rem;
+  height: auto;
+}
+
+.menuOptions label {
+  font-size: 1rem;
+  padding: 0;
 }
