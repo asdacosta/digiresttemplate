@@ -1,4 +1,6 @@
 .fixed {
+  display: flex;
+  justify-content: center;
   z-index: 5;
 }
 
@@ -80,8 +82,6 @@
   position: fixed;
   bottom: 0;
   bottom: 1.2rem;
-  left: 50%;
-  transform: translateX(-50%);
   background: rgb(255, 136, 0);
   padding: 0.4rem 0.7rem;
   border-radius: 1rem;
