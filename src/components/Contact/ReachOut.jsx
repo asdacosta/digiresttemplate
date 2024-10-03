@@ -1,8 +1,11 @@
 import styles from "./Contact.module.css";
 
-function ReachOut() {
+function ReachOut({ className }) {
   return (
-    <section>
+    <section
+      className={styles.form}
+      style={className ? { display: "block" } : { display: "none" }}
+    >
       <form autoComplete="off">
         <section className={styles.fields}>
           <div className={styles.nameBox}>
@@ -27,16 +30,12 @@ function ReachOut() {
             <label htmlFor="serve">How can we serve you?</label>
             <select name="serve" id="serve" defaultValue="" autoComplete="new-serve">
               <option value="" disabled></option>
-              <option value="book">Book a table</option>
               <option value="general inquiry">General Inquiry</option>
               <option value="feedback">Feedback on Your Experience</option>
               <option value="catering">Catering Information</option>
               <option value="menu questions">Menu Questions</option>
               <option value="event booking">Event Booking</option>
-              <option value="partnership">Partnership Opportunities</option>
               <option value="job inquiry">Job Inquiries</option>
-              <option value="complaint">Complaints or Issues</option>
-              <option value="location inquiry">Location Information</option>
               <option value="sponsorship">Sponsorship Requests</option>
               <option value="other">Other</option>
             </select>

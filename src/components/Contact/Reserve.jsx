@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./Contact.module.css";
 
-function Reserve() {
+function Reserve({ className }) {
   const [minDate, setMinDate] = useState("");
   const [maxDate, setMaxDate] = useState("");
 
@@ -18,7 +18,10 @@ function Reserve() {
   }, []);
 
   return (
-    <section>
+    <section
+      className={styles.form}
+      style={className ? { display: "block" } : { display: "none" }}
+    >
       <form autoComplete="off">
         <section className={styles.fields}>
           <div className={styles.nameBox}>

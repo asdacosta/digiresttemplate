@@ -1,8 +1,11 @@
 import styles from "./Contact.module.css";
 
-function Order() {
+function Order({ className }) {
   return (
-    <section>
+    <section
+      className={styles.form}
+      style={className ? { display: "block" } : { display: "none" }}
+    >
       <form autoComplete="off">
         <section className={styles.fields}>
           <div className={styles.nameBox}>
