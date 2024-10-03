@@ -1,8 +1,19 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import styles from "../Home.module.css";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 function Location() {
+  const mapRef = useRef(null);
+  const mapInView = useInView(mapRef);
+  const mapControls = useAnimation();
+
+  const displayMapOnView = () => {
+    if (mapInView) mapControls.start("visible");
+  };
+  useEffect(displayMapOnView, [mapInView, mapControls]);
+
   return (
     <section className={styles.location}>
       <section className={styles.locationDetails}>
@@ -77,7 +88,16 @@ function Location() {
           </div>
         </div>
       </section>
-      <section className={styles.mapBox}>
+      <motion.section
+        className={styles.mapBox}
+        ref={mapRef}
+        initial="hidden"
+        animate={mapControls}
+        variants={{
+          hidden: { opacity: 0, filter: "blur(10px)" },
+          visible: { opacity: 1, filter: "blur(0)", transition: { duration: 1.5 } },
+        }}
+      >
         <MapContainer
           center={[5.6037, -0.187]}
           zoom={13}
@@ -91,7 +111,7 @@ function Location() {
             </Popup>
           </Marker>
         </MapContainer>
-      </section>
+      </motion.section>
     </section>
   );
 }
