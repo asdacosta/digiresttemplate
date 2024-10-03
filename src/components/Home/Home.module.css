@@ -41,6 +41,9 @@
 }
 
 .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   z-index: 2;
   background-color: white;
   padding: 3rem 0.4rem;
