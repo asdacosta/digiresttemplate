@@ -108,9 +108,17 @@
     transition: width 0.25s ease-in-out, opacity 0.25s ease-in-out;
   }
 
+  .right > * {
+    opacity: 0;
+  }
+
   .right.open {
-    width: 15rem;
+    width: 12rem;
     opacity: 1;
     pointer-events: auto;
+  }
+
+  .right.open > * {
+    opacity: 1;
   }
 }
