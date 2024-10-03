@@ -1,72 +1,41 @@
 import styles from "./Contact.module.css";
+import { Order } from "./Order";
+import { ReachOut } from "./ReachOut";
+import { Reserve } from "./Reserve";
 
 function Contact() {
   return (
     <section className={styles.contact}>
-      <h2>Reach out to us!</h2>
-      <form autoComplete="off">
-        <section className={styles.fields}>
-          <div className={styles.nameBox}>
-            <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="name" autoComplete="new-name" required />
-          </div>
-          <div className={styles.emailBox}>
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              autoComplete="new-email"
-              required
-            />
-          </div>
-          <div className={styles.telBox}>
-            <label htmlFor="tel">Phone Number</label>
-            <input type="tel" name="tel" id="tel" autoComplete="new-tel" />
-          </div>
-          <div className={styles.serveBox}>
-            <label htmlFor="serve">How can we serve you?</label>
-            <select name="serve" id="serve" defaultValue="" autoComplete="new-serve">
-              <option value="" disabled></option>
-              <option value="order">Place an order</option>
-              <option value="book">Book a table</option>
-              <option value="general inquiry">General Inquiry</option>
-              <option value="feedback">Feedback on Your Experience</option>
-              <option value="catering">Catering Information</option>
-              <option value="menu questions">Menu Questions</option>
-              <option value="event booking">Event Booking</option>
-              <option value="partnership">Partnership Opportunities</option>
-              <option value="job inquiry">Job Inquiries</option>
-              <option value="complaint">Complaints or Issues</option>
-              <option value="location inquiry">Location Information</option>
-              <option value="sponsorship">Sponsorship Requests</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div className={styles.messageBox}>
-            <label htmlFor="message">Message</label>
-            <textarea
-              name="message"
-              id="message"
-              cols="20"
-              rows="10"
-              autoComplete="new-message"
-              maxLength="3000"
-              required
-            />
-          </div>
-          <button className={styles.submit} type="button">
-            Send
-          </button>
-        </section>
-      </form>
-
-      <section className={styles.oddMedium}>
-        <div>
-          <span>Call/WhatsApp To Place Order</span>
-          <span>+233 123 456 7891</span>
-        </div>
+      <section className={styles.type}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z" />
+        </svg>
+        <span>Reach out</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+          <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+        </svg>
       </section>
+      <ReachOut />
+      <section className={styles.type}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+          <path d="M423.3 440.7c0 25.3-20.3 45.6-45.6 45.6s-45.8-20.3-45.8-45.6 20.6-45.8 45.8-45.8c25.4 0 45.6 20.5 45.6 45.8zm-253.9-45.8c-25.3 0-45.6 20.6-45.6 45.8s20.3 45.6 45.6 45.6 45.8-20.3 45.8-45.6-20.5-45.8-45.8-45.8zm291.7-270C158.9 124.9 81.9 112.1 0 25.7c34.4 51.7 53.3 148.9 373.1 144.2 333.3-5 130 86.1 70.8 188.9 186.7-166.7 319.4-233.9 17.2-233.9z" />
+        </svg>
+        <span>Order now</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+          <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+        </svg>
+      </section>
+      <Order />
+      <section className={styles.type}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm64 80l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm128 0l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM64 400l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16z" />
+        </svg>
+        <span>Make a Reservation</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+          <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+        </svg>
+      </section>
+      <Reserve />
     </section>
   );
 }
