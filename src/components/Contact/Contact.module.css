@@ -2,8 +2,6 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 1rem;
   padding: 5rem 0;
 }
@@ -15,7 +13,7 @@
   align-items: center;
   gap: 1rem;
   padding: 2rem;
-  border-bottom: 0.12rem solid rgb(204, 203, 203);
+  border-bottom: 0.12rem solid rgb(225, 225, 225);
 }
 
 .type > * {
@@ -109,6 +107,7 @@
   gap: 0.5rem;
   font-size: 1.2rem;
   border-radius: 1rem;
+  color: black;
 }
 
 .call button {
