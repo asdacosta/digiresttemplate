@@ -15,7 +15,7 @@ function Nav() {
 
     setMenuOpened((prev) => !prev);
     menu.setDirection(menuOpened ? -1 : 1);
-    menu.setSpeed(1.5);
+    menu.setSpeed(1.7);
     menu.play();
   };
 
