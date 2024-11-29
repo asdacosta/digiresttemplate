@@ -1,5 +1,6 @@
 import { Nav } from "./components/Nav/Nav";
 import "./App.css";
+import "./index.css";
 import "./reset.css";
 import { FixedOrder } from "./components/FixedOrder/FixedOrder";
 import { Outlet } from "react-router-dom";
